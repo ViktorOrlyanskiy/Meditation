@@ -1,0 +1,107 @@
+// стили таймера
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 4;
+
+    &__buttons {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 6;
+    }
+
+    &__progress {
+    }
+
+    &__output {
+    }
+}
+
+.button {
+    &__play {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 65px;
+        top: -95px;
+        z-index: 6;
+        cursor: pointer;
+
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    &__pause {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 85px;
+        top: -60px;
+        z-index: 6;
+        cursor: pointer;
+
+        svg {
+            width: 130px;
+            height: 130px;
+        }
+    }
+}
+
+// стили прогресса
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 4;
+
+    svg {
+        width: 300px;
+        height: 300px;
+    }
+}
+.progress-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: calc(height/2);
+    z-index: 4;
+
+    &__circle {
+    }
+}
+.progress-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: calc(height/2);
+    z-index: 5;
+
+    &__circle {
+        transform-origin: center;
+        transform: rotate(-90deg);
+        transition: stroke-dashoffset 1s;
+    }
+}
+
+.time {
+    position: relative;
+    left: 0;
+    top: 180px;
+    font-size: 50px;
+    color: $lightBgColor;
+}

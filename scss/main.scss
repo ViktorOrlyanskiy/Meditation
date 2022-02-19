@@ -1,0 +1,157 @@
+@import "_nullstyle.scss";
+@import "_helpers.scss";
+
+.wrapper {
+    background-color: $hoverLightTextColor;
+}
+
+.full-screen {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    &__body {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    &__video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit: cover;
+    }
+
+    &__columns {
+        position: relative;
+        left: 0;
+        top: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border: 1px solid red;
+    }
+}
+
+.column {
+    &__left {
+        flex: 1 1 auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    &__center {
+        flex: 0 0 auto;
+    }
+
+    &__rigth {
+        flex: 1 1 auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+    }
+}
+
+// стили кнопок левой колонки
+.set-time {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightBgColor;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    margin: 0 0 40px 0;
+}
+.set-time:last-child {
+    margin: 0 0 0 0;
+}
+.set-time:hover {
+    transition: 0.3s;
+    background-color: $hoverLightBgColor;
+    opacity: 0.8;
+}
+
+// подключение стилей таймера
+@import "_timer.scss";
+
+// стили кнопок правой колонки
+.set-video {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightBgColor;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    margin: 0 0 40px 0;
+}
+.set-video:last-child {
+    margin: 0 0 0 0;
+}
+.set-video:hover {
+    transition: 0.3s;
+    background-color: $hoverLightBgColor;
+    opacity: 0.8;
+}
+// стили вспомогательной кнопки
+.help {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightBgColor;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    margin: 0 0 40px 0;
+}
+.help:last-child {
+    margin: 0 0 0 0;
+}
+.help:hover {
+    transition: 0.3s;
+    background-color: $hoverLightBgColor;
+    opacity: 0.8;
+}
