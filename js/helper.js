@@ -1,5 +1,38 @@
 
 
+
+function getCurrentContent({ elements, searchClassCSS, setClassCSS }) {
+
+    let currentContent;
+
+    const changeClassCSS = function () {
+        elements.forEach(element => {
+            if (element.classList.contains(searchClassCSS)) {
+                element.classList.remove(setClassCSS);
+                currentContent = element;
+            }
+            else {
+                element.classList.add(setClassCSS);
+            }
+        })
+    }
+    changeClassCSS();
+    return currentContent;
+}
+
+
+function changeClassCSS({ elements, searchClassCSS, setClassCSS }) {
+    elements.forEach(element => {
+        if (element.classList.contains(searchClassCSS)) {
+            element.classList.remove(setClassCSS)
+        }
+        else {
+            element.classList.add(setClassCSS)
+        }
+    })
+}
+
+
 function getRadius(w, sw) {
     return ((w / 2) - (sw / 2))
 }

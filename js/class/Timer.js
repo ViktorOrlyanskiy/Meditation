@@ -19,8 +19,8 @@ export default class Timer {
         this._statusTimer = null; // текущий статус таймера play/pause
         this._playButton = null; // кнопка play html-element
         this._pauseButton = null; // кнопка pause html-element
-        this.video = null; // текущее видео со страницы
-        this.audio = null; // текущее аудио со страницы
+        this._video = null; // текущее видео со страницы
+        this._audio = null; // текущее аудио со страницы
 
         // svg element для render()
         this.button = {
@@ -62,6 +62,12 @@ export default class Timer {
         }
         if (this._pauseButton === null) {
             this._pauseButton = document.querySelector('.button__pause');
+        }
+        if (this._video === null) {
+            this._video = document.querySelector('.full-screen__video');
+        }
+        if (this._audio === null) {
+            this._audio = document.querySelector('.audio');
         }
     }
 
@@ -157,8 +163,8 @@ export default class Timer {
             this._timer();
             this._statusTimer = 'play';
 
-            this.video.play();
-            this.audio.play();
+            this._video.play();
+            this._audio.play();
         }
     }
 
@@ -169,8 +175,8 @@ export default class Timer {
         clearTimeout(this._timerId);
         this._statusTimer = 'pause';
 
-        this.video.pause();
-        this.audio.pause();
+        this._video.pause();
+        this._audio.pause();
     }
 
     /**
@@ -191,10 +197,10 @@ export default class Timer {
     * Method _videoStop() - ставит видео/аудио на стоп // >> _reset() / _finish()
     */
     _videoStop() {
-        this.video.pause();
-        this.audio.pause();
-        this.video.currentTime = 0;
-        this.audio.currentTime = 0;
+        this._video.pause();
+        this._audio.pause();
+        this._video.currentTime = 0;
+        this._audio.currentTime = 0;
     }
 
     /**

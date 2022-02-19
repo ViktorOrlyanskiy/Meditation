@@ -106,52 +106,43 @@
 @import "_timer.scss";
 
 // стили кнопок правой колонки
-.set-video {
-    width: 200px;
-    height: 50px;
+.btn-right {
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $lightBgColor;
-    border-radius: 10px;
+    border-radius: 50%;
     font-size: 20px;
-    text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 2px;
 
     cursor: pointer;
     margin: 0 0 40px 0;
 }
-.set-video:last-child {
+.btn-right:last-child {
     margin: 0 0 0 0;
 }
-.set-video:hover {
+.btn-right:hover {
     transition: 0.3s;
     background-color: $hoverLightBgColor;
     opacity: 0.8;
 }
-// стили вспомогательной кнопки
-.help {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $lightBgColor;
-    border-radius: 10px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 2px;
 
-    cursor: pointer;
-    margin: 0 0 40px 0;
+.volume {
+    svg {
+        width: 30px;
+        height: 30px;
+    }
 }
-.help:last-child {
-    margin: 0 0 0 0;
+.next-content {
+    svg {
+        width: 50px;
+        height: 50px;
+    }
 }
-.help:hover {
-    transition: 0.3s;
-    background-color: $hoverLightBgColor;
-    opacity: 0.8;
+
+// вспомогательные стили для javaScript
+.hidden {
+    display: none;
 }

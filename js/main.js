@@ -15,7 +15,7 @@ timer.render();
 
 
 // получает кнопку следующее видео
-const nextVideo = document.querySelector('.help');
+const nextVideo = document.querySelector('.next-content');
 nextVideo.addEventListener('click', nextContent);
 
 function nextContent() {
@@ -30,68 +30,12 @@ btn.forEach(elem => {
 
     elem.addEventListener('click', function () {
         let time = this.dataset.time;
-
         if (timer.getStatusTimer() !== 'play') {
-            if (timer.video === null) {
-                timer.video = document.querySelector('.full-screen__video');
-                timer.audio = document.querySelector('.audio');
-
-            }
             timer.setTime(time);
             timer.reset();
         }
     })
 })
-
-
-// const video = document.querySelectorAll('video');
-// const audio = document.querySelectorAll('audio');
-
-// const btnSetVideo = document.querySelectorAll('.set-video');
-// btnSetVideo.forEach(elem => {
-
-//     let funcParameters = { elements: video, setClassCSS: 'hidden' };
-
-//     elem.addEventListener('click', function () {
-
-//         funcParameters.searchClassCSS = this.dataset.video;
-//         changeClassCSS(funcParameters);
-//         timer.video = getCurrentContent(funcParameters)
-
-//     })
-// })
-
-
-function getCurrentContent({ elements, searchClassCSS, setClassCSS }) {
-
-    let currentContent;
-
-    const changeClassCSS = function () {
-        elements.forEach(element => {
-            if (element.classList.contains(searchClassCSS)) {
-                element.classList.remove(setClassCSS);
-                currentContent = element;
-            }
-            else {
-                element.classList.add(setClassCSS);
-            }
-        })
-    }
-    changeClassCSS();
-    return currentContent;
-}
-
-
-function changeClassCSS({ elements, searchClassCSS, setClassCSS }) {
-    elements.forEach(element => {
-        if (element.classList.contains(searchClassCSS)) {
-            element.classList.remove(setClassCSS)
-        }
-        else {
-            element.classList.add(setClassCSS)
-        }
-    })
-}
 
 
 // запускает и останавливает таймер
@@ -104,14 +48,10 @@ function changeClassCSS({ elements, searchClassCSS, setClassCSS }) {
     buttons.play.addEventListener('click', function () {
         timer.changeButtons(buttons);
         timer.play();
-
-        // nextVideo.removeEventListener('click', nextContent);
     })
     buttons.pause.addEventListener('click', function () {
         timer.changeButtons(buttons);
         timer.pause();
-
-        // nextVideo.addEventListener('click', nextContent);
     })
 }
 
