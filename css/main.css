@@ -146,7 +146,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid red;
 }
 
 .column__left {
@@ -194,8 +193,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .set-time {
-  width: 200px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,10 +205,9 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffff99;
-  border-radius: 10px;
+  border-radius: 50%;
   font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   cursor: pointer;
   margin: 0 0 40px 0;

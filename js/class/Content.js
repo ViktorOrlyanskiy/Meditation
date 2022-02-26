@@ -1,17 +1,18 @@
 export default class Content {
 
     /**
-    * properties
+    * получает список видео/аудио в виде одинаковых названий и стартовый слайд, по умолчанию равен 0
+    * properties 
     * @param 
     
     */
 
-    constructor() {
+    constructor(listContent, count = 0) {
         this.outputVideo = document.querySelector('.h-v');
         this.outputAudio = document.querySelector('.h-a');
 
-        this.listContent = ['sea', 'bonfire', 'rain', 'forest'];
-        this.count = 0;
+        this.listContent = listContent;
+        this.count = count;
         this.currentVideo = `./assets/video/${this.listContent[this.count]}.mp4`;
         this.currentAudio = `./assets/sounds/${this.listContent[this.count]}.mp3`;
     }

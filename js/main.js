@@ -3,8 +3,10 @@ import Timer from "./class/Timer.js"
 import Content from "./class/Content.js"
 
 
+
 // создает и отрисовывает видео+аудио
-const content = new Content();
+const listContent = ['sea', 'bonfire', 'rain', 'forest'];
+const content = new Content(listContent);
 content.render();
 
 

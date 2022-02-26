@@ -47,8 +47,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        border: 1px solid red;
     }
 }
 
@@ -78,16 +76,15 @@
 
 // стили кнопок левой колонки
 .set-time {
-    width: 200px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $lightBgColor;
-    border-radius: 10px;
+    border-radius: 50%;
     font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 2px;
 
     cursor: pointer;
